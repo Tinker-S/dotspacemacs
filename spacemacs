@@ -27,6 +27,7 @@ values."
      ;; ----------------------------------------------------------------
      auto-completion
      better-defaults
+     chinese
      git
      markdown
      org
