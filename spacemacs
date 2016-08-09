@@ -260,7 +260,9 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/set-leader-keys "op" 'youdao-dictionary-search-at-point+)
   (spacemacs/set-leader-keys "oi" 'youdao-dictionary-search-from-input)
-  )
+  (add-hook 'eshell-mode-hook (lambda ()
+                                (local-set-key (kbd "C-j") 'eshell-send-input)))
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
