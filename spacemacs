@@ -25,21 +25,21 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     ;;auto-completion
      better-defaults
-     (chinese :variables
-              chinese-enable-youdao-dict t)
+     ;;(chinese :variables
+     ;;         chinese-enable-youdao-dict t)
      git
      markdown
      org
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
-     syntax-checking
+     ;;spell-checking
+     ;;syntax-checking
      emacs-lisp
      go
-     c-c++
+     ;;c-c++
      java
      html
      javascript
@@ -259,8 +259,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (spacemacs/set-leader-keys "op" 'youdao-dictionary-search-at-point+)
-  (spacemacs/set-leader-keys "oi" 'youdao-dictionary-search-from-input)
-  )
+  (spacemacs/set-leader-keys "oi" 'youdao-dictionary-search-from-input))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
