@@ -39,7 +39,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ;;auto-completion
+     auto-completion
      better-defaults
      ;;(chinese :variables
      ;;         chinese-enable-youdao-dict t)
@@ -49,8 +49,6 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     ;;spell-checking
-     ;;syntax-checking
      emacs-lisp
      go
      ;;c-c++
@@ -67,7 +65,7 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(eclim)
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
