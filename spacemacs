@@ -39,7 +39,9 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     auto-completion
+     (auto-completion :variables auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-snippets-in-popup t
+                      :disabled-for org markdown)
      better-defaults
      ;;(chinese :variables
      ;;         chinese-enable-youdao-dict t)
@@ -47,11 +49,13 @@ values."
      markdown
      org
      (shell :variables
+            shell-default-shell 'eshell
             shell-default-height 30
             shell-default-position 'bottom)
      emacs-lisp
      go
-     ;;c-c++
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode)
      java
      html
      javascript
