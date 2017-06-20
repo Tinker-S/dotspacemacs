@@ -60,10 +60,12 @@ values."
      (c-c++ :variables
             c-c++-default-mode-for-headers 'c++-mode)
      java
-     html
-     javascript
      python
      restclient
+     html
+     yaml
+     javascript
+     react
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -328,6 +330,14 @@ you should place your code here."
   (spacemacs/set-leader-keys "oi" 'youdao-dictionary-search-from-input)
   (add-hook 'eshell-mode-hook (lambda ()
                                 (local-set-key (kbd "C-j") 'eshell-send-input)))
+
+  ;; use company for auto-complete every mode
+  (global-company-mode)
+
+  ;; for js2-mode default settings
+  (setq-default js2-basic-offset 2)
+  (setq-default js-indent-level 2)
+  (setq-default css-indent-offset 2)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
