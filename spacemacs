@@ -46,6 +46,7 @@ This function should only modify configuration layer settings."
      markdown
      org
      (shell :variables
+            shell-default-shell 'eshell
             shell-default-height 30
             shell-default-position 'bottom)
      ;; Set --lang=en_US to fix problems below:
