@@ -466,6 +466,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
     '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
       ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
       ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+  (if *is-a-mac*
+      (setq dired-use-ls-dired nil))
   )
 
 (defun dotspacemacs/user-load ()
