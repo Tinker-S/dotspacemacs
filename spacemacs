@@ -42,10 +42,10 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      auto-completion
-     html
      emacs-lisp
-     git
-     helm
+     ivy
+     (git :variables
+          git-magit-status-fullscreen t)
      markdown
      org
      treemacs
@@ -59,7 +59,6 @@ This function should only modify configuration layer settings."
                      ispell-extra-args '("--lang=en_US"))
      syntax-checking
      python
-     dart
      themes-megapack
      )
 
@@ -198,7 +197,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(solarized-light-high-contrast
+   dotspacemacs-themes '(zenburn
                          spacemacs-dark
                          spacemacs-light)
 
