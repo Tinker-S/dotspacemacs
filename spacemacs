@@ -48,7 +48,8 @@ This function should only modify configuration layer settings."
           git-magit-status-fullscreen t)
      markdown
      org
-     treemacs
+     (treemacs :variables
+               treemacs-width 25)
      (shell :variables
             shell-default-shell 'eshell
             shell-default-height 30
