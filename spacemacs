@@ -483,6 +483,21 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq org-agenda-files '("~/workspace/github/todo/org"))
+  (setq org-default-notes-file "~/workspace/github/todo/org/notes.org")
+  (setq org-capture-templates
+        '(("t" "todo" entry (file+headline "~/workspace/github/todo/org/todo.org" "Todo")
+           "* TODO [#B] %?\n  %i\n"
+           :empty-lines 1)
+          ("n" "notes" entry (file+headline "~/workspace/github/todo/org/notes.org" "Quick notes")
+           "* %?\n  %i\n %U"
+           :empty-lines 1)
+          ("s" "code snippet" entry
+           (file "~/workspace/github/todo/org/snippet.org")
+           "* %?\t%^g\n#+BEGIN_SRC %^{language}\n\n#+END_SRC")
+          ("w" "work" entry (file+headline "~/workspace/github/todo/org/work.org" "Work")
+           "* TODO [#A] %?\n  %i\n %U"
+           :empty-lines 1)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
